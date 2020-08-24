@@ -91,7 +91,7 @@ class NewCommand extends Command
             }, $commands);
         }
 
-        $process = Process::fromShellCommandline(implode(' && ', $commands), $this->directory, null, null, null);
+        $process = new Process(implode(' && ', $commands), $directory, null, null, null);
 
         $process->run(function ($type, $line) use ($output) {
             $output->write($line);

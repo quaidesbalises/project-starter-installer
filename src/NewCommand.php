@@ -168,7 +168,8 @@ class NewCommand extends Command
         $commands = [
             'cd '.$this->name,
             'php artisan storage:link',
-            'php artisan migrate:fresh --seed'
+            'php artisan migrate:fresh --seed',
+            'rm -rf .git'
         ];
 
         $this->output->writeln('Lauch migrations and seedings ...');

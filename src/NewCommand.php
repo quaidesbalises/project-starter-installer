@@ -179,7 +179,8 @@ class NewCommand extends Command
         $commands = [
             'rm -rf .git',
             'git init',
-            'gc "First commit"'
+            'git add .',
+            'git commit -m "First commit"'
         ];
 
         $this->output->writeln('Git init ...');

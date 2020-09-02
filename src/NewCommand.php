@@ -177,6 +177,7 @@ class NewCommand extends Command
 
         // Git
         $commands = [
+            'cd '.$this->name,
             'rm -rf .git',
             'git init',
             'git add .',
@@ -184,7 +185,7 @@ class NewCommand extends Command
         ];
 
         $this->output->writeln('Git init ...');
-        $this->runCommands($commands);
+        $this->runCommands($commands, false);
     }
 
     /**
